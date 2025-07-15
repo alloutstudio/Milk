@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milk</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+
+    .custom-header {
+      background-color: #0CB6E3;
+    }
+
+    .hero-logo {
+      max-width: 180px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .poster-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay-section {
+      position: relative;
+      text-align: center;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .overlay-logo {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .btn-custom {
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #0CB6E3;
+      text-align: center;
+      color: white;
+      padding: 10px 0;
+    }
+
+    header {
+      box-shadow: none !important;
+    }
+
+    .poster-section {
+      position: relative;
+    }
+
+    .poster-button {
+      position: absolute;
+      bottom: 6vw;
+      right: 4vw;
+      background-color: #fff;
+      border: 3px solid #00AEEF;
+      color: #000;
+      font-weight: bold;
+      padding: 1.2em 5vw;
+      border-radius: 50px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      z-index: 2;
+      transition: background-color 0.3s, color 0.3s;
+      white-space: nowrap;
+    }
+
+    .poster-button:hover {
+      background-color: #00AEEF;
+      color: white;
+    }
+
+    .poster-button .arrow {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .poster-button {
+        font-size: 1rem;
+        padding: 1em 3vw;
+        bottom: 4vw;
+        right: 3vw;
+      }
+    }
+
+    /* Gallery Styles - Rectangle Portrait */
+    .gallery-img-portrait {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      border: 3px solid white;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-img-portrait:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="custom-header text-center fixed-top z-3">
+    <img src="Milk logo.png" alt="Milk Logo" class="hero-logo d-block mx-auto" style="max-height: 80px;" />
+    <a href="form.html" class="btn btn-light w-100 rounded-0 fw-bold" style="margin-top: 0;">
+      WHOLESALE FORM
+    </a>
+  </header>
+
+  <!-- Dynamic Spacer to match exact header height -->
+  <div id="spacer"></div>
+
+  <!-- Poster 1 -->
+  <section>
+    <img src="milk.png" alt="Poster 1" class="poster-img" />
+  </section>
+
+  <!-- Poster 2 -->
+  <section>
+    <img src="milk (1).png" alt="Poster 2" class="poster-img" />
+  </section>
+
+  <!-- Poster 3 -->
+  <section class="poster-section position-relative">
+    <img src="p3.png" alt="Poster 3" class="img-fluid w-100" />
+    <a href="form.html" class="poster-button">
+      WHOLESALE FORM
+      <span class="arrow">→</span>
+    </a>
+  </section>
+
+  <!-- 🆕 GALLERY SECTION -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Product Gallery</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="1.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="1.png" class="img-fluid gallery-img-portrait" alt="Image 1">
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="2.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="2.png" class="img-fluid gallery-img-portrait" alt="Image 2">
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="3.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="3.png" class="img-fluid gallery-img-portrait" alt="Image 3">
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="4.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="4.png" class="img-fluid gallery-img-portrait" alt="Image 4">
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="5.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="5.png" class="img-fluid gallery-img-portrait" alt="Image 4">
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <a href="6.png" class="glightbox" data-gallery="milk-gallery">
+          <img src="6.png" class="img-fluid gallery-img-portrait" alt="Image 4">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p></p>
+    <img src="Milk logo.png" alt="Milk Footer Logo" style="max-height: 80px;" />
+  </footer>
+
+  <!-- Adjust Spacer -->
+  <script>
+    window.addEventListener('load', () => {
+      const header = document.querySelector('header');
+      const spacer = document.getElementById('spacer');
+      spacer.style.height = header.offsetHeight + 'px';
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
+</body>
+</html>

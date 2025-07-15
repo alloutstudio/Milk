@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milk Brand</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+
+    .custom-header {
+      background-color: #0CB6E3;
+    }
+
+    .container {
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;            
+}
+
+header {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+    .hero-logo {
+      max-width: 180px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .poster-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+    .poster-img {
+      width: 100%;
+      height: auto;
+        display: block;
+    }
+
+    footer {
+        background-color: #0CB6E3;
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+    }
+
+.form-box {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  background-color: rgba(12, 182, 227, 0.25); /* Blue with 25% transparency */
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 60%;           /* ⬅️ Wider form box */
+  max-width: none;      /* ⬅️ Remove limit if needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+
+.form-box h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: white;
+  text-align: left;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+button {
+  background-color: white;
+  color: #0CB6E3;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60%;
+  margin: 10px auto 0 auto;
+}
+
+@media (max-width: 480px) {
+  .header {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-box {
+    position: static;
+    transform: none;
+    width: 95%;
+    margin: 1.5rem auto;
+  }
+}
+</style>
+
+</head>
+<body>
+
+   <!-- Sticky Header -->
+<header class="custom-header text-center fixed-top z-3">
+  <img src="Milk logo.png" alt="Milk Logo" class="hero-logo d-block mx-auto" style="max-height: 80px;" />
+  <a href="index.html" class="btn btn-light w-100 rounded-0 fw-bold" style="margin-top: 0;">
+    HOME
+  </a>
+</header>
+
+
+<!-- Dynamic Spacer to match exact header height -->
+<div id="spacer"></div>
+
+
+
+ <section class="poster-section position-relative">
+  <!-- Background Poster -->
+  <img src="MILK.png" alt="Poster 1" class="poster-img" />
+
+  <!-- Form Box Positioned at Left -->
+  <div class="form-box">
+    <h1>WHOLESALE FORM</h1>
+    <p class="subtitle">Complete this form to establish a wholesale partnership with us.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="006981d9-6f8e-4eaf-85d5-9120d33cc24b">
+      <label>NAME</label>
+      <input type="text" name="name" required />
+      <label>PHONE NUMBER</label>
+      <input type="tel" name="phone" required />
+      <label>EMAIL</label>
+      <input type="email" name="email" required />
+      <label>MESSAGE</label>
+      <textarea name="message" rows="4" required></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Footer Logo -->
+  <footer>
+    <p></p>
+    <img src="Milk logo.png" alt="Milk Footer Logo" style="max-height: 80px;" />
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      const header = document.querySelector('header');
+      const spacer = document.getElementById('spacer');
+      spacer.style.height = header.offsetHeight + 'px';
+    });
+  </script>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
